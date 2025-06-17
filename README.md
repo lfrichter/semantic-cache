@@ -126,6 +126,13 @@ New response generated and added to cache with ID 3.
   * **Real Responses**: Modify the `_cache_miss` method to actually call the LLM (`ollama.chat`) and store the real generated response.
   * **Cache Invalidation**: For a more advanced system, consider how to invalidate or update a cached response if better information becomes available.
 
+### 🗺️ Flow Diagram: Query Processing Logic
+
+Here is a flowchart that illustrates the entire process, from receiving the query to deciding whether to `CACHE HIT` or `CACHE MISS` (which leads to persistence).
+
+![Diagram](https://i.imgur.com/kruYBr0.png)
+
+
 ## 📜 License
 
 This project is distributed under the MIT License. See the `LICENSE` file for more details.
