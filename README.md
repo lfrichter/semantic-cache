@@ -89,39 +89,40 @@ The workflow is designed for speed and efficiency:
 ## 📋 Example Output
 
 ```bash
-Cache Semântico inicializado com o modelo 'mistral:7b' e dimensão 4096.
+Semantic Cache initialized with model 'mistral:7b' and dimension 4096.
 
-🔎 Processando query: 'Qual a capital da França?'
-Cache vazio. Gerando nova resposta...
-Gerando nova resposta com o LLM...
-Nova resposta gerada e adicionada ao cache com ID 0.
-✔️ Resposta (nova): 'Esta é uma nova resposta para 'Qual a capital da França?' gerada em 21:08:07'
+🔎 Processing query: 'What is the capital of France?'
+Cache empty. Generating new response...
+Generating new response with LLM...
+New response generated and added to cache with ID 0.
+✔️ Response (new): 'This is a new response for 'What is the capital of France?' generated at 21:46:54'
 
-🔎 Processando query: 'Qual é a capital francesa?'
-🎯 CACHE HIT! Distância: 0.0473 (< 0.2)
-Resgatando resposta do ID: 0
-✔️ Resposta (do cache): 'Esta é uma nova resposta para 'Qual a capital da França?' gerada em 21:08:07'
-⏱️ Tempo total: 0.22 segundos.
+🔎 Processing query: 'What is the French capital?'
+🎯 CACHE HIT! Distance: 0.0622 (< 0.2)
+Retrieving response from ID: 0
+✔️ Response (from cache): 'This is a new response for 'What is the capital of France?' generated at 21:46:54'
+⏱️ Total time: 0.17 seconds.
 
-🔎 Processando query: 'Quem escreveu Dom Quixote?'
-❌ CACHE MISS. Distância mínima: 0.6777 (>= 0.2)
-Gerando nova resposta com o LLM...
-Nova resposta gerada e adicionada ao cache com ID 1.
-✔️ Resposta (nova): 'Esta é uma nova resposta para 'Quem escreveu Dom Quixote?' gerada em 21:08:09'
-⏱️ Tempo total: 0.15 segundos.
+🔎 Processing query: 'Who wrote Don Quixote?'
+❌ CACHE MISS. Minimum distance: 0.5731 (>= 0.2)
+Generating new response with LLM...
+New response generated and added to cache with ID 1.
+✔️ Response (new): 'This is a new response for 'Who wrote Don Quixote?' generated at 21:46:56'
+⏱️ Total time: 0.13 seconds.
 
-🔎 Processando query: 'Qual a principal cidade da França?'
-🎯 CACHE HIT! Distância: 0.1416 (< 0.2)
-Resgatando resposta do ID: 0
-✔️ Resposta (do cache): 'Esta é uma nova resposta para 'Qual a capital da França?' gerada em 21:08:07'
-⏱️ Tempo total: 0.16 segundos.
+🔎 Processing query: 'What is the main city in France?'
+❌ CACHE MISS. Minimum distance: 0.2089 (>= 0.2)
+Generating new response with LLM...
+New response generated and added to cache with ID 2.
+✔️ Response (new): 'This is a new response for 'What is the main city in France?' generated at 21:46:58'
+⏱️ Total time: 0.15 seconds.
 
-🔎 Processando query: 'Qual a cor do céu?'
-❌ CACHE MISS. Distância mínima: 0.5936 (>= 0.2)
-Gerando nova resposta com o LLM...
-Nova resposta gerada e adicionada ao cache com ID 2.
-✔️ Resposta (nova): 'Esta é uma nova resposta para 'Qual a cor do céu?' gerada em 21:08:12'
-⏱️ Tempo total: 0.16 segundos.
+🔎 Processing query: 'What is the color of the sky?'
+❌ CACHE MISS. Minimum distance: 0.4674 (>= 0.2)
+Generating new response with LLM...
+New response generated and added to cache with ID 3.
+✔️ Response (new): 'This is a new response for 'What is the color of the sky?' generated at 21:46:59'
+⏱️ Total time: 0.16 seconds.
 ```
 
 
