@@ -113,11 +113,11 @@ New response generated and added to cache with ID 3.
 
 ## 🧠 Analysis of Results
 
-  * **The Obvious Hit** (Distance: `0.0473`): The query *"Qual é a capital francesa?"* is an almost direct paraphrase of *"Qual a capital da França?"*. The system recognized this with an extremely low distance, resulting in a perfect and fast *hit*.
+  * **The Obvious Hit** (Distance: `0.0473`): The query *"What is the capital of France?"* is an almost direct paraphrase of *"What is the French capital?"*. The system recognized this with an extremely low distance, resulting in a perfect and fast *hit*.
 
-  * **The Smart Hit** (Distance: `0.1416`): This is the most impressive result. The query *"Qual a principal cidade da França?"* is not the same, but *semantically it is very close*. The system was smart enough to understand this proximity, and since the distance was below our `THRESHOLD` of `0.2`, it served the cached answer. Notice how the distance is greater than the first hit, which is logical and expected.
+  * **The Smart Hit** (Distance: `0.1416`): This is the most impressive result. The query *"What is the main city in France?"* is not the same, but *semantically it is very close*. The system was smart enough to understand this proximity, and since the distance was below our `THRESHOLD` of `0.2`, it served the cached answer. Notice how the distance is greater than the first hit, which is logical and expected.
 
-  * **The Correct Misses** (Distances `0.6777` & `0.5936`): The queries about *"Dom Quixote"* and *"a cor do céu"* are semantically very distant from the "capital of France" topic. The system calculated high distances, well above the threshold, and correctly identified them as *misses*. This proves the cache is not being too "permissive".
+  * **The Correct Misses** (Distances `0.6777` & `0.5936`): The queries about *"Dom Quixote"* and *"the color of the sky"* are semantically very distant from the "capital of France" topic. The system calculated high distances, well above the threshold, and correctly identified them as *misses*. This proves the cache is not being too "permissive".
 
 ## 🛠️ Next Steps & Improvements
 
