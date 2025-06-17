@@ -12,6 +12,9 @@ EMBEDDING_DIM = 4096
 # Este valor é crucial e precisa de ajuste empírico.
 # Distâncias menores = queries mais similares para um hit.
 CACHE_THRESHOLD = 0.2
+# Ajuste Fino do THRESHOLD: experimentar com o valor 0.2. Um valor menor (ex: 0.1)
+# tornaria o cache mais rigoroso, enquanto um valor maior (ex: 0.3) o
+# tornaria mais abrangente, com o risco de alguns falsos positivos.
 
 class SemanticCache:
     def __init__(self, dimension: int, model: str):
