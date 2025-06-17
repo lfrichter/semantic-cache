@@ -31,10 +31,22 @@ class SemanticCache:
         print(f"Cache Semântico inicializado com o modelo '{self.model}' e dimensão {self.dimension}.")
 
     def _get_embedding(self, text: str) -> np.ndarray:
-        """Gera um embedding para um texto usando o Ollama."""
+        """Gera um embedding para um texto e o NORMALIZA."""
         try:
             response = ollama.embeddings(model=self.model, prompt=text)
-            return np.array(response['embedding']).astype('float32').reshape(1, -1)
+            embedding = np.array(response['embedding']).astype('float32')
+
+            # --- PASSO CRÍTICO DE NORMALIZAÇÃO ---
+            # Calcula a norma L2 (magnitude) do vetor. Adiciona um valor pequeno (1e-9) para evitar divisão por zero.
+            norm = np.linalg.norm(embedding)
+            if norm == 0:
+                return embedding.reshape(1, -1) # Retorna o vetor zero se a norma for zero
+
+            # Divide cada elemento do vetor pela sua norma.
+            normalized_embedding = embedding / norm
+            # ------------------------------------
+
+            return normalized_embedding.reshape(1, -1)
         except Exception as e:
             print(f"Erro ao gerar embedding: {e}")
             return None
