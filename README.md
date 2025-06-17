@@ -4,22 +4,7 @@
 # 🛸 Semantic Cache
 
 
-
-[![semantic-cache](https://img.shields.io/github/stars/lfrichter/semantic-cache?style=flat&logo=github)](https://github.com/lfrichter/semantic-cache)
-
-[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
-
-[![NumPy](https://img.shields.io/badge/NumPy-2.3.0-013243?style=flat&logo=numpy&logoColor=white)](https://numpy.org)
-
-[![Ollama Compatible](https://img.shields.io/badge/Ollama-Compatible-green?logo=Ollama)](https://ollama.com/)
-
-[![FAISS Version](https://img.shields.io/badge/FAISS-Latest-red?logo=facebook)](https://faiss.ai/)
-
-[![Vector Search](https://img.shields.io/badge/Vector%20Search-Enabled-blueviolet?logo=elasticsearch)](https://faiss.ai/)
-
-[![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative)](https://app.outlier.ai/playground/LICENSE)
-
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?logo=github-actions)](https://github.com/yourusername/semantic-cache)
+[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/) [![NumPy](https://img.shields.io/badge/NumPy-2.3.0-013243?style=flat&logo=numpy&logoColor=white)](https://numpy.org) [![Ollama Compatible](https://img.shields.io/badge/Ollama-Compatible-green?logo=Ollama)](https://ollama.com/) [![FAISS Version](https://img.shields.io/badge/FAISS-Latest-red?logo=facebook)](https://faiss.ai/) [![Vector Search](https://img.shields.io/badge/Vector%20Search-Enabled-blueviolet?logo=elasticsearch)](https://faiss.ai/)
 
 A blazing-fast, *local-first* semantic cache designed to sit in front of Large Language Models (LLMs). It leverages the power of local *embeddings* and vector search to **dramatically reduce latency** and computational load by reusing answers from previously seen, semantically similar questions.
 
